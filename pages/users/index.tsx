@@ -26,19 +26,19 @@ export default function Users(props: {
 }
 
 export async function getStaticProps() {
-  const data = await (
-    await fetch('http://localhost:3000/api/user', {
-      method: 'GET',
-    })
-  ).json();
+ // const data = await (
+  //   await fetch('http://localhost:3000/api/user', {
+  //     method: 'GET',
+  //   })
+  // ).json();
 
-  console.log(data);
+  // console.log(data);
 
   return {
     props: {
       title: 'Default Users Page',
       link: 'Go to Home Page - Click here',
-      users: data,
+      users: [],
     },
   };
 }
